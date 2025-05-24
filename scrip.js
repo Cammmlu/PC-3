@@ -1,7 +1,7 @@
 document
   .getElementById("formulario")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+    event.preventDefault(); 
 
     let nombre = document.getElementById("nombre").value.trim();
     let email = document.getElementById("email").value.trim();
@@ -13,7 +13,7 @@ document
       return;
     }
 
-    // Validar email con expresión regular
+  
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       resultado.textContent = "Correo electrónico no válido.";
@@ -23,7 +23,7 @@ document
     resultado.style.color = "green";
     resultado.textContent = "¡Mensaje enviado con éxito!";
 
-    // Opcional: Aquí puedes reiniciar el formulario
+    
     document.getElementById("formulario").reset();
   });
 
